@@ -163,8 +163,7 @@ export default function LandingVibeCoding() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-slate-700">
             <a href="#aprenderas" className="hover:text-slate-900">¿Qué aprenderás?</a>
             <a href="#metodologia" className="hover:text-slate-900">Metodología</a>
-            <a href="#temario" className="hover:text-slate-900">Temario</a>
-            <a href="#temario-detallado" className="hover:text-slate-900">Temario detallado</a>
+            <a href="#temario-detallado" className="hover:text-slate-900">Temario</a>
             <a href="#precio" className="hover:text-slate-900">Precios</a>
             <a href="#inscripcion" className="hover:text-slate-900">Inscripción</a>
           </nav>
@@ -433,7 +432,7 @@ export default function LandingVibeCoding() {
           <div>
             <h2 className="text-3xl font-bold text-slate-900">Reserva tu lugar</h2>
             <p className="mt-2 text-slate-700">
-              Completa el formulario o contactanos por WhatsApp y te enviaremos los pasos para finalizar tu inscripción. Cupo limitado.
+              Completa el formulario o contáctanos por WhatsApp y te enviaremos los pasos para finalizar tu inscripción. Cupo limitado.
             </p>
             <div className="mt-6 space-y-2 text-sm text-slate-600">
               <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-indigo-600" /> Te contactaremos por correo</p>
@@ -680,6 +679,17 @@ export default function LandingVibeCoding() {
           </div>
         </div>
       </footer>
+
+      <a
+        href={`https://wa.me/${CONFIG.WHATSAPP_NUMBER.replace(/[^\d]/g,"")}?text=${encodeURIComponent(
+          "Hola, me interesa el curso Vibe Coding."
+        )}`}
+        className="fixed bottom-5 right-5 flex items-center justify-center rounded-full shadow-lg w-14 h-14 bg-green-500 hover:bg-green-600"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Image src="/whatsapp.svg" alt="WhatsApp" width={28} height={28} />
+      </a>
     </div>
   );
 }
